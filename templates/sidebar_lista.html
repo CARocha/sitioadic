@@ -1,7 +1,10 @@
   <div class="large-3 columns">
-    <div class="box-red"> Viviendo con VIH</div>
-    <div class="box-blue"> El programa</div>
-    <div class="title-sidebar-1">Eventos</div>
+    <div  class="box-tabs">
+      <div class="box-blue tabb"><a href="{% url 'noticias_categoria' 'desarrollo_comunitario' %}"> Desarrollo Comunitario</a></div>
+      <div class="box-green tabb"> <a href="{% url 'noticias_categoria' 'salud_medio_ambiente' %}">Salud y medio ambiente</a></div>
+      <div class="box-red tabb"> <a href="{% url 'noticias_categoria' 'comision_mujer_ninez' %}">Comision ejecutora de la mujer y la niñez</a></div>
+      </div>
+    <div class="title-sidebar">Eventos</div>
     <div class="event-sidebar">
     {% for obj in eventos %}
       <div class="calendar-icon">{{obj.fecha_inicio|date:"j M"}}</div>
@@ -9,7 +12,7 @@
     {% endfor %}
     </div>
     <br>
-    <div class="title-sidebar-2">Contactenos</div>
+    <div class="title-sidebar">Contactenos</div>
     <div class="text-box">
       Para mayor informacion:
       Direccion: <br>Busto Jose marti 100 al sur
