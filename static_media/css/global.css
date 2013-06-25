@@ -182,7 +182,10 @@ ol{}
 h2{ font-size: 18px;}
 
 .title-bar{ padding: 8px; background: #2a80b9;  margin-top: 10px; margin-bottom: 8px; 
-			color: #fff; font-weight: bold; float: left;}
+			color: #fff; font-weight: bold; float: left; 
+			border-radius:5px 5px;
+			-webkit-border-radius:5px 5px ;
+			-moz-border-radius:5px 5px;}
 .news-post{  float: left; margin-bottom: 1em; }
 .list-news{ width: 450px; float: left;  border-bottom: #ecf0f1 solid 1px; margin-bottom: 10px;  }
 .title-news a { font-size: 14px; padding-top: 10px; color: #464749;  }
@@ -194,7 +197,10 @@ h2{ font-size: 18px;}
 .read-more a{color: #fff;}
 .read-more a:hover{  text-decoration: underline; }
 .title-bar-2{ padding: 8px; background: #16a086;  margin-top: 10px; margin-bottom: 8px; 
-			color: #fff; font-weight: bold; float: left; }
+			color: #fff; font-weight: bold; float: left;
+			border-radius:5px 5px;
+			-webkit-border-radius:5px 5px ;
+			-moz-border-radius:5px 5px; }
 /**** front- news list ****/
 
 /*post news list*/
@@ -312,7 +318,10 @@ h2 { line-height: 1em;}
 .content-pub{background: #ecf0f1;}
 .pub-front{ float: left; margin: 8px; }
 .title-publicacion{padding: 10px; background: #2a80b9;  margin-top: 10px; 
-			color: #fff; font-weight: bold; width: 150px; }
+			color: #fff; font-weight: bold; width: 150px; 
+			 border-radius:5px 5px;
+			-webkit-border-radius:5px 5px ;
+			-moz-border-radius:5px 5px; }
 .title-pub{ font-size: 12px; }
 
 
