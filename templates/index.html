@@ -87,6 +87,7 @@
             <div class="img-news"><a href="{{noticia.get_absolute_url}}"><img src="/media/{{img}}"></a></div>
           {% endthumbnail %}          
         {% endfor %}
+        <span class="fecha-inicio">Publicado:{{noticia.fecha|date:"j  F,y"}}</span>
         <h2 class="title-news"><a href="{{noticia.get_absolute_url}}">{{noticia.titulo}}</a></h2>
         <div class="text-news">{{ noticia.descripcion|striptags|safe|truncatewords:16 }}</div>
       </div>
