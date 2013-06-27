@@ -35,13 +35,13 @@ class NoticiasList(ListView):
 class NoticiasDetailView(DetailView):
     model = Noticias
 
-def multimedia_publicacion(request, template='multimedia/multimedia_publi.html'):
-  ultimas_publicaciones = Publicaciones.objects.order_by('-id')[0:5]
+def multimedia(request, template='multimedia/multimedia.html'):
+  
   ultimos_audios = Audio.objects.order_by('-id')[0:4]
   ultimos_videos = Videos.objects.order_by('-id')[0:4]
 
   return render(request, template, { 'ultimos_videos':ultimos_videos,
-                                     'ultimas_publicaciones':ultimas_publicaciones,
+                                     
                                      'ultimos_audios':ultimos_audios})
 
 def filtro_categoria(request,categoria,template='noticias/noticias_list.html'):

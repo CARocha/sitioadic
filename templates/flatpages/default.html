@@ -21,15 +21,17 @@
  </div>
 
  <div class="large-3 columns">
+  <br>
     <div class="box-green">
       <ul class="secondary-menu">
-        <li><a href="#">Aliados y donantes</a></li>
-        <li><a href="#">Objetivos y perspectivas</a></li>
-        <li><a href="#">La labor</a></li>
+        <li><a href="#">Donde trabajamos</a></li>
+        <li><a href="#">Equipo</a></li>
+        <li><a href="#">Historia</a></li>
       </ul>
     </div>
-    <div class="box-red"><a href="/viviendo-vih/">Viviendo con Vih. conoce m&aacutes.</a></div>
-    <div class="title-sidebar-3">Noticias</div>
+    <br>
+    <div class="box-blue"><a href="#">Donantes</a></div>
+    <div class="title-sidebar">Noticias</div>
     <div class="news-sidebar">
     {% for obj in noticias %}
     	<div class="text-news-side"><a href="{{obj.get_absolute_url}}">{{obj.titulo}}</a></div>

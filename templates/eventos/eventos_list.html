@@ -30,11 +30,11 @@
             <a href="{{ obj.get_absolute_url }}">{{ obj.titulo }}</a>
             </span>
             <br>
-            {{ obj.fecha_inicio|date:"j-m-Y" }} Hasta {{obj.fecha_finalizacion|date:"j-m-Y"}}
-            <br>
-            Descripcion:
-            {{ obj.descripcion|striptags|safe|truncatewords:8 }}<br>
-            <a class="tiny  button" href="{{ obj.get_absolute_url }}">ver mas</a>
+            <span class="texto-fecha">inicio:{{ obj.fecha_inicio|date:"j/m/Y" }} &nbsp; terminacion: {{obj.fecha_finalizacion|date:"j/m/Y"}}</span>
+            <br><br>
+            <span class="text-event">Descripcion:
+            {{ obj.descripcion|striptags|safe|truncatewords:8 }}<br></span>
+            <a class="tiny audios-d button" href="{{ obj.get_absolute_url }}">ver mas</a>
             </div>
         {% endfor %}
 
@@ -56,13 +56,7 @@
     
     </div>
     
-    <div class="title-sidebar">Eventos</div>
-    <div class="event-sidebar">
-    {% for obj in eventos %}
-      <div class="calendar-icon">{{obj.fecha_inicio|date:"j M"}}</div>
-      <div class="text-sidebar">{{obj.titulo}}</div>
-    {% endfor %}
-    </div>
+    
 
   </div>
 
