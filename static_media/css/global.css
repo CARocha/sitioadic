@@ -192,7 +192,7 @@ h2{ font-size: 18px;}
 .title-news a:hover{ color: #7f8c8d;}
 .img-news{ float: left; padding: 10px;}
 .text-news{ float: left; width: 300px; font-family: 'Open Sans', sans-serif; font-size: 12px;}
-.fecha-inicio{font-size: 10px; color: #bdc3c7;}
+.fecha-inicio{font-size: 10px; color:rgb(147, 154, 158);}
 .read-more{ float: left; margin-left: 20em;  background:#2a7eba; color: #fff; padding: 10px;
 			margin-bottom: 10px; }
 .no-more{ margin: 10px 0 10px 5px; clear: both; padding: 6px; text-decoration: underline;
@@ -245,18 +245,25 @@ h2{ font-size: 18px;}
 .author, .dates{margin: 12px; font-size: 11px; color: #7f8c8d;}
 .thumbs{ margin-bottom: 10px;}
 .text-pages img { margin-right: 10px;}
+.filtro{  float: left; margin-bottom: 10px; clear: both;}
+
+.pub-list{float: left; clear: both;}
+.pub-view{ float: left; margin: 14px;}
+.pub-descripcion{  font-size: 11px;}
+.pub-descripcion a{ color: #000;}
 /* page single*/
 
 /*** sidebar ***/
 .secondary-menu a{ color: #fff;}
-.box-red{ background: #e84c3d; -webkit-border-radius: 8px; font-size: 13px;
+.box-red{ background: #e84c3d; -webkit-border-radius: 8px; font-size: 13px; width: 169px; 
 		  border-radius: 8px; padding: 1em;  color: #fff; border-bottom: 6px solid rgb(224, 50, 50);}
 .box-blue{ background: #3598db; -webkit-border-radius: 8px; border-bottom: 6px solid #327ba9; font-size: 13px;
 		   border-radius: 8px; padding: 1em;  color: #fff;}
 .box-green{ background: #27ae61; -webkit-border-radius: 8px; border-bottom: 6px solid #2a9457;
 		   border-radius: 8px; padding: 1em;   color: #fff; font-size: 13px;}
-
-.box-blue a , .box-green a{ color: #fff;}
+.box-purple{background: #8f44ad; -webkit-border-radius: 8px; border-bottom: 6px solid #793396;
+		   border-radius: 8px; padding: 1em;   color: #fff; font-size: 13px;}
+.box-blue a , .box-green a{ color: #fff;}s
 
 .list-pub{float: left;}
 .multimedia-list{float: left;}

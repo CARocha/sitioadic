@@ -1,12 +1,51 @@
 {% extends "base.html" %}
-
+{% load thumbnail%}
 {% block contenido %}
-    <h2>Noticias</h2>
-    <ul>
+
+
+<div class="pag-title">
+   <div class="row">
+      <div class="large-12 page-title columns">Publicaciones</div>
+   </div>
+</div>
+<div class="bg-single">
+<div class="row">
+<div class="large-12 bg-single columns">
+
+<div class="filtro">
+<div class="box-blue tabb"><a href="#">Desarrollo comunitario</a></div>
+<div class="box-green tabb"><a href="#">Salud y medio ambiente</a></div>
+<div class="box-purple tabb"><a href="#">Comision de la mujer y la niñez</a></div>
+</div>    
+
+  <div class="pub-list">
         {% for publicacion in object_list %}
-            <li><a href="{{ publicacion.get_absolute_url }}">{{ publicacion.titulo }}</a></li>
-            <li>{{ publicacion.fecha }}</li>
-            <li>{{ publicacion.descripcion|striptags|safe|truncatewords:16 }}</li>
-        {% endfor %}
-    </ul>
+		  <div class="pub-view">
+		
+        {% if object.fotos.all %}
+          {% for imagen in object.fotos.all|slice:"1" %}
+            {% thumbnail imagen.imagen "150x200" crop="1%" as img %}
+             <img src="/media/{{img}}">
+            {% endthumbnail %} 
+          {%endfor%}
+       {% else %}
+         <img src="http://placehold.it/150x200">
+      {% endif %}
+       <h2 class="pub-descripcion">
+        <a href="{{ publicacion.get_absolute_url }}">{{ publicacion.titulo }}</a><br>
+       {{ publicacion.fecha }}
+
+        </h2>
+      </div>
+    {% empty %}
+        <p>No hay publicacion</p>
+
+       {% endfor %}
+
+  </div>
+    
+</div>
+</div>
+</div>
+
 {% endblock %}
