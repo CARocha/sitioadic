@@ -144,16 +144,22 @@ CKEDITOR_UPLOAD_PATH = os.environ.get('MEDIA_ROOT',os.path.join(SITE_ROOT, 'medi
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': [
-            [      'Undo', 'Redo',
+            [      'Undo', 'Redo','Source',
               '-', 'Bold', 'Italic', 'Underline',
               '-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock',
               '-', 'Link', 'Unlink', 'Anchor',
               '-', 'SpellChecker', 'Scayt','Image',
+              '-', 'Cut','Copy','PasteText',
             ],
         ],
         'toolbarCanCollapse': False,
         'uiColor': '#EEe',
+        'width':'600',
     },
 }
 #google search id
-GOOGLE_SEARCH_PARTNER_ID = '008303288612978745529:mrverxh26vs'
+GOOGLE_SEARCH_PARTNER_ID = ''
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'Administracion ASONVIHSIDA',
+    
+}
