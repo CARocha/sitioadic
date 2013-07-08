@@ -160,6 +160,6 @@ CKEDITOR_CONFIGS = {
 #google search id
 GOOGLE_SEARCH_PARTNER_ID = ''
 SUIT_CONFIG = {
-    'ADMIN_NAME': 'Administracion ASONVIHSIDA',
+    'ADMIN_NAME': 'Administracion ADIC',
     
 }
