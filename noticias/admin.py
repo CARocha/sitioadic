@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Noticias
+from .models import Noticias, InicioTexto
 from multimedia.models import *
 
 from django.contrib.flatpages.admin import FlatPageAdmin
@@ -31,3 +31,4 @@ admin.site.unregister(FlatPage)
 admin.site.register(FlatPage, FlatPageAdmin)
 
 admin.site.register(Noticias, NoticiasAdmin)
+admin.site.register(InicioTexto)

@@ -60,14 +60,14 @@
     </div>
   </div>
   <div class="large-4 columns">
-    <h1 class="welcome">Bienvenidos a  ASONVIHSIDA</h1>
-    <div class="text-welcome">Porttitor in habitasse platea dis ultrices. Tortor nascetur nec cursus sagittis odio duis et! Nascetur! Nec non magna integer? Mid scelerisque dolor in facilisis aliquam adipiscing habitasse aliquet dictumst rhoncus! Lorem</div>
-    <ul class="menu-rapido circle">
-      <li><a href="#">Como ser voluntario en ADIC</a></li>
-      <li><a href="#">Nuestro trabajo en ADIC</a></li>
-      <li><a href="#">Organizacion comunitaria</a></li>
-      
-    </ul>
+    <h1 class="welcome">Bienvenidos a  Adic Nicaragua</h1>
+    <div class="text-welcome">
+      {% for  obj in texto %}
+          {{obj.texto|safe}}
+      {% empty %}
+          <p>No hay nada que mostrar</p>
+      {% endfor %} 
+    </div>
   </div>
 
   </div>
