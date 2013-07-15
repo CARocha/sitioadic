@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, url
 from django.views.generic import ListView, DetailView
 from .models import Publicaciones
+from .views import filtro_publicaciones
 
 urlpatterns = patterns('',
         url(r'^lista/$',  ListView.as_view(model=Publicaciones,
@@ -12,4 +13,6 @@ urlpatterns = patterns('',
                                                                                             queryset=Publicaciones.objects.all(),
                                                                                             ), 
                                                                                             name='publicaciones_detalles'),
+        url(r'^publicaciones/(?P<categoria>[-_\w]+)/$','filtro_publicaciones' , 
+                                                                                            name='filtro_publicaciones'),
     )

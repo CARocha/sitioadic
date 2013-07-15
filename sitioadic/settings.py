@@ -158,7 +158,7 @@ CKEDITOR_CONFIGS = {
     },
 }
 #google search id
-GOOGLE_SEARCH_PARTNER_ID = ''
+GOOGLE_SEARCH_PARTNER_ID = '008303288612978745529:bgtlcjhszgs'
 SUIT_CONFIG = {
     'ADMIN_NAME': 'Administracion ADIC',
     

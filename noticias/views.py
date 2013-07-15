@@ -20,7 +20,7 @@ def index(request, template='index.html'):
     #4 ultimos audios
     ultimos_audios = Audio.objects.order_by('-id')[0:4]
     #testo al inicio de la pagina
-    texto = InicioTexto.objects.all()
+    texto = InicioTexto.objects.filter(id=1)
     
     return render(request, template, {'ultimas_noticias':ultimas_noticias,
                                        'ultimas_destacadas':ultimas_destacadas,
@@ -39,12 +39,10 @@ class NoticiasDetailView(DetailView):
     model = Noticias
 
 def multimedia(request, template='multimedia/multimedia.html'):
-  
-  ultimos_audios = Audio.objects.order_by('-id')[0:4]
-  ultimos_videos = Videos.objects.order_by('-id')[0:4]
+    ultimos_audios = Audio.objects.order_by('-id')[0:4]
+    ultimos_videos = Videos.objects.order_by('-id')[0:4]
 
-  return render(request, template, { 'ultimos_videos':ultimos_videos,
-                                     
+    return render(request, template, { 'ultimos_videos':ultimos_videos,  
                                      'ultimos_audios':ultimos_audios})
 
 def filtro_categoria(request,categoria,template='noticias/noticias_list.html'):
