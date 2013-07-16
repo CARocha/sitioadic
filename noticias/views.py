@@ -8,7 +8,7 @@ from publicaciones.models import Publicaciones
 
 def index(request, template='index.html'):
     #ultimas 3 noticias
-    ultimas_noticias = Noticias.objects.order_by('-id')[0:3]
+    ultimas_noticias = Noticias.objects.order_by('-fecha')[0:3]
     #ultimas 4 noticias destacadas
     ultimas_destacadas = Noticias.objects.filter(destacada=True).order_by('-id')[0:4]
     #2 videos 
