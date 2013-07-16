@@ -24,13 +24,15 @@
   <br>
     <div class="box-green">
       <ul class="secondary-menu">
-        <li><a href="#">Donde trabajamos</a></li>
-        <li><a href="#">Equipo</a></li>
-        <li><a href="#">Historia</a></li>
+        {% for obj in menu_flat %}
+          <li><a href="{{obj.url}}">{{obj.title}}</a></li>
+        {% empty %}
+          <li><a href="#">No existe paginas creadas</a></li>
+        {% endfor %}
       </ul>
     </div>
     <br>
-    <div class="box-blue"><a href="#">Donantes</a></div>
+    <div class="box-blue"><a href="/donantes/">Donantes</a></div>
     <div class="title-sidebar">Noticias</div>
     <div class="news-sidebar">
     {% for obj in noticias %}

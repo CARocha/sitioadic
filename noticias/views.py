@@ -4,6 +4,10 @@ from .models import Noticias, InicioTexto
 from multimedia.models import Videos, Audio
 from eventos.models import Eventos
 from publicaciones.models import Publicaciones
+from .forms import ContactForm
+from django.core.mail import send_mail
+from django.http import HttpResponse
+import json
 
 
 def index(request, template='index.html'):
@@ -48,3 +52,24 @@ def multimedia(request, template='multimedia/multimedia.html'):
 def filtro_categoria(request,categoria,template='noticias/noticias_list.html'):
     object_list = Noticias.objects.filter(categoria=categoria)
     return render(request, template, {'object_list':object_list})
+
+def contacto(request, template='contacto.html'):
+    form = ContactForm()
+    texto2 = InicioTexto.objects.filter(id=2)
+    return render(request, template, {'form': form,'texto2':texto2})
+
+def contacto_ajax(request):
+    if request.is_ajax():
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['asunto']
+            message = form.cleaned_data['mensaje']
+            sender = form.cleaned_data['correo']
+
+            recipients = ['adic_asociacion@turbonett.com.ni',
+                          'crocha09.09@gmail.com']
+
+            send_mail(subject, message, sender, recipients)
+            return HttpResponse( json.dumps( 'exito' ), mimetype='application/json' )
+        else:
+            return HttpResponse( json.dumps( 'falso' ), mimetype='application/json' )

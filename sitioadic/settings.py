@@ -108,6 +108,7 @@ INSTALLED_APPS = (
     'geoposition',
     'embed_video',
     'googlesearch',
+    'captcha',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -160,6 +161,6 @@ CKEDITOR_CONFIGS = {
 #google search id
 GOOGLE_SEARCH_PARTNER_ID = '008303288612978745529:bgtlcjhszgs'
 SUIT_CONFIG = {
-    'ADMIN_NAME': 'Administracion ADIC',
-    
+    'ADMIN_NAME': 'Administracion ADIC',    
 }
+CAPTCHA_FONT_SIZE = 44
