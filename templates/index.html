@@ -45,7 +45,7 @@
     <div class="slide-img">
       <ul data-orbit>
       {% for obj in ultimas_destacadas %}
-        {% for imagen in obj.fotos.all %}
+        {% for imagen in obj.fotos.all|slice:"1" %}
         <li>
           {% thumbnail imagen.imagen "620x360" crop="10%" as img %}
             <img src="/media/{{img}}">
