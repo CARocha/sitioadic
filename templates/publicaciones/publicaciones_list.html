@@ -21,13 +21,10 @@
   <div class="pub-list">
         {% for publicacion in object_list %}
 		  <div class="pub-view">
-		
-        {% if object.fotos.all %}
-          {% for imagen in object.fotos.all|slice:"1" %}
-            {% thumbnail imagen.imagen "150x200" crop="1%" as img %}
+        {% if publicacion.portada %}
+            {% thumbnail publicacion.portada "150x200" crop="1%" as img %}
              <img src="/media/{{img}}">
             {% endthumbnail %} 
-          {%endfor%}
        {% else %}
          <img src="http://placehold.it/150x200">
       {% endif %}
