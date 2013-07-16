@@ -54,7 +54,7 @@
         </div>
       {% endfor %}
       </div>
-      <span class="no-more"><a href="#">más videos</a></span>
+      <span class="no-more"><a href="{% url 'videos_lista' %}">más videos</a></span>
 
       </div>
 
@@ -69,7 +69,7 @@
         <div class="tiny audios-d  button"><a href="/media/{{obj.audio}}" download="{{obj.nombre}}">descargar</a></div>
        </div>
       {% endfor %}
-    <span class="no-more"><a href="#">más audios</a></span>
+    <span class="no-more"><a href="{% url 'audio_lista' %}">más audios</a></span>
       </div>
      
     
