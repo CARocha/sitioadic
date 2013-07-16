@@ -9,6 +9,7 @@ from django.contrib.contenttypes import generic
 from django.core.urlresolvers import reverse
 from tagging_autocomplete.models import TagAutocompleteField
 from geoposition.fields import GeopositionField
+from multimedia.models import Adjuntos
 
 # Create your models here.
 class Eventos(models.Model):
@@ -21,6 +22,7 @@ class Eventos(models.Model):
     fotos = generic.GenericRelation(Fotos)
     categoria= TagAutocompleteField(help_text='Separar elementos con "," ', 
                                     null=True, blank=True)
+    adjunto = generic.GenericRelation(Adjuntos)
 
     autor = models.ForeignKey(User)
 
@@ -34,6 +36,7 @@ class Eventos(models.Model):
     class Meta:
         verbose_name = 'Evento'
         verbose_name_plural = 'Eventos'
+        ordering = ('-id',)
 
     def __unicode__(self):
         return u'%s' % self.titulo

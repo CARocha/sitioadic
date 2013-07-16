@@ -11,18 +11,16 @@
  <div class="row">
   <div class="large-12 bg-single columns">
     <div class="large-9 columns">
-
-    
         {% for obj in object_list %}
         <div class="event-list">
          <div class="event-image-list">
-        {% if object.fotos.all %}
-          {% for imagen in object.fotos.all|slice:"1" %}
+      {% if obj.fotos.all %}
+          {% for imagen in obj.fotos.all|slice:"1" %}
             {% thumbnail imagen.imagen "150x100" crop="1%" as img %}
                 <div class="img-pagina"><img src="/media/{{img}}"></div>
             {% endthumbnail %} 
           {%endfor%}
-       {% else %}
+      {% else %}
          <div class="img-pagina"><img src="http://placehold.it/150x100"></div>
       {% endif %}
          </div>

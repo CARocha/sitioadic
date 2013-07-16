@@ -145,10 +145,10 @@ CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': [
             [      'Undo', 'Redo','Source',
-              '-', 'Bold', 'Italic', 'Underline',
+              '-', 'Bold', 'Italic', 'Underline','NumberedList','BulletedList',
               '-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock',
               '-', 'Link', 'Unlink', 'Anchor',
-              '-', 'SpellChecker', 'Scayt','Image',
+              '-', 'SpellChecker', 'Scayt','Image','Table',
               '-', 'Cut','Copy','PasteText',
             ],
         ],

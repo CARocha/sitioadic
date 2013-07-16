@@ -13,9 +13,14 @@ from ckeditor.widgets import CKEditorWidget
 
 class FotosAdmin(generic.GenericTabularInline):
 	model = Fotos
+	extra = 1
+
+class AdjuntosAdmin(generic.GenericTabularInline):
+	model = Adjuntos
+	extra = 1
 
 class NoticiasAdmin(admin.ModelAdmin):
-	inlines = [FotosAdmin]
+	inlines = [FotosAdmin, AdjuntosAdmin]
 	list_display = ['titulo','fecha','autor', 'get_tags']
 
 

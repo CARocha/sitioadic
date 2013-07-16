@@ -19,11 +19,15 @@
      <div class="post-news">
      {% for noticia in object_list %}
        <div class="list-post-news">
-       	{% for imagen in noticia.fotos.all|slice:"1" %}
-	       	{% thumbnail imagen.imagen "140x100" crop="10%" as img %}
-	            <div class="img-news"><a href="{{noticia.get_absolute_url}}"><img src="/media/{{img}}"></a></div>
-	        {% endthumbnail %}          
+        {% if noticia.fotos.all %}
+          {% for imagen in noticia.fotos.all|slice:"1" %}
+          {% thumbnail imagen.imagen "140x100" crop="10%" as img %}
+              <div class="img-news"><a href="{{noticia.get_absolute_url}}"><img src="/media/{{img}}"></a></div>
+          {% endthumbnail %}          
         {% endfor %}
+        {%else%}
+          <div class="img-news"><a href="{{noticia.get_absolute_url}}"><img src="http://placehold.it/140x100"></a></div>
+        {% endif %}
         <h2 class="title-news"><a href="{{noticia.get_absolute_url}}">{{noticia.titulo}}</a></h2>
         <div class="news-post-list">{{ noticia.descripcion|striptags|safe|truncatewords:16 }}</div>
         <a class="more-news" href="{{noticia.get_absolute_url}}">Leer m&aacutes</a>
