@@ -138,6 +138,7 @@
     {% empty %}
         <p>No hay evento</p>
     {% endfor %}
+  <div class="read"><a href="{% url 'evento_lista' %}">Ver más</a></div>
 
   </div>
   
@@ -160,7 +161,9 @@
                                 {% endvideo %}
       </div>
     {% endfor %}
+    <div class="read"><a href="{% url 'videos_lista' %}">Ver más</a></div>
     </div>
+    
   </div><!--large-7 videos -->    
   
   <div class="large-5  columns">
@@ -174,7 +177,9 @@
         <li><a href="#" data-src="http://s3.amazonaws.com/audiojs/01-dead-wrong-intro.mp3">dead wrong intro</a></li>
         {% endfor %}
       </ol>
+      <div class="read"><a href="{% url 'audio_lista' %}">Ver más</a></div>
     </div>
+    
   </div>
 
 </div><!--large-12 content- publicaciones --> 
