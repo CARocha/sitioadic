@@ -20,9 +20,9 @@ def index(request, template='index.html'):
     #2 eventos
     ultimos_eventos = Eventos.objects.order_by('-id')[0:2]
     #3 ultimas publicaciones
-    ultimas_publicaciones = Publicaciones.objects.order_by('-id')[0:3]
+    ultimas_publicaciones = Publicaciones.objects.order_by('-id')[0:2]
     #4 ultimos audios
-    ultimos_audios = Audio.objects.order_by('-id')[0:4]
+    ultimos_audios = Audio.objects.order_by('-id')[0:5]
     #testo al inicio de la pagina
     texto = InicioTexto.objects.filter(id=1)
     
