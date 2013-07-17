@@ -13,6 +13,6 @@ urlpatterns = patterns('',
                                                                                             queryset=Publicaciones.objects.all(),
                                                                                             ), 
                                                                                             name='publicaciones_detalles'),
-        url(r'^publicaciones/(?P<categoria>[-_\w]+)/$','filtro_publicaciones' , 
+        url(r'^biblioteca/(?P<categoria>[-_\w]+)/$','filtro_publicaciones' , 
                                                                                             name='filtro_publicaciones'),
     )
