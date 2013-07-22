@@ -7,7 +7,7 @@ urlpatterns = patterns('noticias.views',
         
     url(r'^(?P<slug>[-_\w]+)/$', view=NoticiasDetailView.as_view(), 
                                  name='noticias_detalle'),
-    url(r'^categoria/(?P<categoria>[-_\w]+)/$', 'filtro_categoria', 
+    url(r'^categoria/(?P<categoria1>[-_\w]+)/(?P<categoria2>[-_\w]+)/$', 'filtro_categoria', 
                                  name='noticias_categoria'),
         
     )
