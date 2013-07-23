@@ -51,10 +51,15 @@ def multimedia(request, template='multimedia/multimedia.html'):
                                      'ultimos_audios':ultimos_audios})
 
 def filtro_categoria(request,categoria1,categoria2,template='noticias/noticias_list.html'):
-    tag1 = Tag.objects.get(name=categoria1)
-    tag2 = Tag.objects.get(name=categoria2)
-    object_list = TaggedItem.objects.get_by_model(Noticias, [tag1,tag2])
-    #object_list = Noticias.objects.filter(categoria__in=[categoria1,categoria2])
+    try:
+        tag1 = Tag.objects.get(name=categoria1)
+    except:
+        tag1 = ''
+    try:
+        tag2 = Tag.objects.get(name=categoria2)
+    except:
+        tag2 = ''
+    object_list = TaggedItem.objects.get_union_by_model(Noticias, [tag1,tag2])
     return render(request, template, {'object_list':object_list})
 
 def contacto(request, template='contacto.html'):
