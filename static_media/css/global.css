@@ -172,7 +172,9 @@ ol{}
 
 
 
-
+object, embed {
+height: 0px;
+}
 /**** audio player *****/
 
 
