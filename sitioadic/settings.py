@@ -153,8 +153,6 @@ CKEDITOR_CONFIGS = {
               '-', 'Cut','Copy','PasteText',
             ],
         ],
-        'toolbarCanCollapse': False,
-        'uiColor': '#EEe',
         'width':'600',
     },
 }

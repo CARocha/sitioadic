@@ -17,7 +17,7 @@ class Publicaciones(models.Model):
     descripcion = RichTextField('Descripción')
     adjunto = models.FileField(upload_to=get_file_path, null=True, blank=True)
     portada = ImageField(upload_to=get_file_path, blank=True, null=True)
-    categoria= TagAutocompleteField(help_text='Separar elementos con "," ', 
+    categoria= TagAutocompleteField('Tags',help_text='Separar elementos con "," ', 
                                     null=True, blank=True)
 
     fileDir = 'publicaciones/'

@@ -13,9 +13,9 @@
 <div class="large-12 bg-single columns">
 
 <div class="filtro">
-<div class="box-blue tabb"><a href="/publicaciones/desarrollo_comunitario/">Desarrollo comunitario</a></div>
-<div class="box-green tabb"><a href="/publicaciones/salud_medio_ambiente/">Salud y medio ambiente</a></div>
-<div class="box-purple tabb"><a href="/publicaciones/comision_mujer_ninez/">Comision de la mujer y la niñez</a></div>
+<div class="box-blue tabb"><a href="{% url 'filtro_publicaciones' 'desarrollo' 'comunitario' %}">Desarrollo comunitario</a></div>
+<div class="box-green tabb"><a href="{% url 'filtro_publicaciones' 'salud' 'ambiente' %}">Salud y medio ambiente</a></div>
+<div class="box-purple tabb"><a href="{% url 'filtro_publicaciones' 'mujer' 'ninez' %}">Comision de la mujer y la niñez</a></div>
 </div>    
 
   <div class="pub-list">
