@@ -14,11 +14,12 @@
     <br>
     <div class="title-sidebar">Contactenos</div>
     <div class="text-box">
-      Escribenos 
-      a nuestro formulario de <a class="contact" href="/contactenos/">contacto aqui.</a><br><br>
-
-      Donde estamos ubicados:<br>
-      Direccion:<br>
-      Costado sur de la Ermita de Guadalupe, 1/2 Cuadra al Sur - Matagalpa- Nicaragua
+     {% if texto3 %}
+       {% for obj in texto3 %}
+         {{obj.texto|safe}}
+       {% endfor %}
+    {%else%}
+      <p>No existe texto</p>
+    {% endif %} 
     </div>
   </div>
